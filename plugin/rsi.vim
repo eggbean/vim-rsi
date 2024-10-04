@@ -76,7 +76,7 @@ function! s:MapMeta() abort
   noremap!        <M-C-h> <C-W>
 endfunction
 
-if has("gui_running") || has('nvim')
+if has("gui_running") || has('nvim') || has('win32')
   call s:MapMeta()
 else
   silent! exe "set <F29>=\<Esc>b"
